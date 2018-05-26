@@ -9,6 +9,7 @@
 #Input : [1 2 3 1 1]
 #Output : 1 
 #1 occurs 3 times which is more than 5/3 times. 
+####Solution source: https://www.geeksforgeeks.org/given-an-array-of-of-size-n-finds-all-the-elements-that-appear-more-than-nk-times/
 class Solution:
     # @param A : tuple of integers
     # @return an integer
