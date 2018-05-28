@@ -16,7 +16,7 @@ int Solution::maximumGap(const vector<int> &A) {
     }
 
     while(i >= 0){
-        if(myArr[i] == false){  # there is at leats one number on the left that is smaller than this..so this one cant be i
+        if(myArr[i] == false){  # there is at least one number on the left that is smaller than this..so this one cant be i
             i--;
             continue;
         }
