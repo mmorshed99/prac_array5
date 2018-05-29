@@ -20,7 +20,7 @@ int Solution::maximumGap(const vector<int> &A) {
             i--;
             continue;
         }
-        while((A[i] > A[j]) && (j > i)){
+        while((A[i] > A[j]) && (j > i)){ // not satisfying the requirements..so moving on
             j--;
         }
         if((j-i) > max_distance){
