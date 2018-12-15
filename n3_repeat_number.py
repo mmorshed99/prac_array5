@@ -53,3 +53,28 @@ class Solution:
                     if final_count[j] > len(A)// 3 :
                         return i
         return -1
+####shorter###
+def repeatedNumber(self, A):
+        def get_numbers(A):
+            max_num = {}
+            for idx in range(len(A)):
+                if max_num.get(A[idx]):
+                    max_num[A[idx]] += 1
+                    continue
+                if len(max_num) < 3:
+                    max_num[A[idx]] = 1
+                    continue
+                for each_key in max_num.keys():
+                    max_num[each_key] -= 1
+                    if max_num[each_key] == 0:
+                        del max_num[each_key]
+            return max_num
+        max_num = get_numbers(A)
+        for each_key in max_num.keys():
+            total = 0
+            for idx in range(len(A)):
+                if  int(each_key) == A[idx]:
+                    total += 1
+                    if total > len(A)/ 3:
+                        return A[idx]
+        return -1
